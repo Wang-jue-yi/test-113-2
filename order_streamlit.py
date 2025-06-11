@@ -242,7 +242,7 @@ class Record():
         # matplotlib.rcParams['font.family'] = 'Microsoft YaHei'
         # matplotlib.rcParams['font.sans-serif'] = ['Microsoft YaHei']
         # matplotlib.rcParams['axes.unicode_minus'] = False  # 解決負號顯示問題
-        matplotlib.rcParams['font.family'] = 'Microsoft JhengHei'
+        matplotlib.rcParams['font.family'] = 'NotoSerifCJKjp-ExtraLight.otf'
         matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
         
         # #### 定義圖表
@@ -299,7 +299,7 @@ class Record():
         # matplotlib.rcParams['font.family'] = 'Microsoft YaHei'
         # matplotlib.rcParams['font.sans-serif'] = ['Microsoft YaHei']
         # matplotlib.rcParams['axes.unicode_minus'] = False  # 解決負號顯示問題
-        matplotlib.rcParams['font.family'] = 'Microsoft JhengHei'
+        matplotlib.rcParams['font.family'] = 'NotoSerifCJKjp-ExtraLight.otf'
         matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
         
         # #### 定義圖表

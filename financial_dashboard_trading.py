@@ -886,7 +886,7 @@ else:
 
 
 # #### 定義圖表
-# matplotlib.rcParams['font.family'] = 'Microsoft JhengHei'
+# matplotlib.rcParams['font.family'] = 'NotoSerifCJKjp-ExtraLight.otf'
 # matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 # ax1 = plt.subplot(2,1,1)
 # ax2 = plt.subplot(2,1,2)
@@ -908,7 +908,7 @@ if choice == choices[4] :                                                    ##'
 
     
 
-# matplotlib.rcParams['font.family'] = 'Microsoft JhengHei'
+# matplotlib.rcParams['font.family'] = 'NotoSerifCJKjp-ExtraLight.otf'
 # matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 # plt.figure()
@@ -961,7 +961,7 @@ if choice == choices[4] :                                                    ##'
 #%%
 ##### 畫累計投資報酬率圖:
 OrderRecord.GeneratorProfit_rateChart(StrategyName='MA')
-# matplotlib.rcParams['font.family'] = 'Noto Sans CJK JP'
+# matplotlib.rcParams['font.family'] = 'Noto Sans CJKtc-VF'
 # matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 # plt.figure()
