@@ -1,5 +1,5 @@
 
-python-3.10.9-amd64.exe
+python_version == 3.10
 numpy
 streamlit
 streamlit_webrtc
