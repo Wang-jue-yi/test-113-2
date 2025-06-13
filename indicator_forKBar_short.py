@@ -23,28 +23,31 @@ class KBar():
     def AddPrice(self,time, open_price, close_price, low_price, high_price,volume):
         # 同一根K棒
         if time <= self.current:
+            if self.TAKBar['close'].size > 0:
             # 更新收盤價
-            self.TAKBar['close'][-1] = close_price
+             self.TAKBar['close'][-1] = close_price
             # 更新成交量
-            self.TAKBar['volume'][-1] += volume  
+             self.TAKBar['volume'][-1] += volume  
             # 更新最高價
-            self.TAKBar['high'][-1] = max(self.TAKBar['high'][-1],high_price)
+             self.TAKBar['high'][-1] = max(self.TAKBar['high'][-1],high_price)
             # 更新最低價
-            self.TAKBar['low'][-1] = min(self.TAKBar['low'][-1],low_price)  
+             self.TAKBar['low'][-1] = min(self.TAKBar['low'][-1],low_price)  
             # 若沒有更新K棒，則回傳0
-            return 0
+             return 0
         # 不同根K棒
-        else:
-            while time > self.current:
-                self.current += self.cycle
-            self.TAKBar['time'] = np.append(self.TAKBar['time'],self.current)
-            self.TAKBar['open'] = np.append(self.TAKBar['open'],open_price)
-            self.TAKBar['high'] = np.append(self.TAKBar['high'],high_price)
-            self.TAKBar['low'] = np.append(self.TAKBar['low'],low_price)
-            self.TAKBar['close'] = np.append(self.TAKBar['close'],close_price)
-            self.TAKBar['volume'] = np.append(self.TAKBar['volume'],volume)
+         else:
+             return 0
+     else:       
+         while time > self.current:
+             self.current += self.cycle
+        self.TAKBar['time'] = np.append(self.TAKBar['time'],self.current)
+        self.TAKBar['open'] = np.append(self.TAKBar['open'],open_price)
+        self.TAKBar['high'] = np.append(self.TAKBar['high'],high_price)
+        self.TAKBar['low'] = np.append(self.TAKBar['low'],low_price)
+        self.TAKBar['close'] = np.append(self.TAKBar['close'],close_price)
+        self.TAKBar['volume'] = np.append(self.TAKBar['volume'],volume)
             # 若有更新K棒，則回傳1
-            return 1
+        return 1
     # 取時間
     def GetTime(self):
         return self.TAKBar['time']      
