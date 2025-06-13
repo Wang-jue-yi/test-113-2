@@ -8,5 +8,5 @@ matplotlib
 openpyxl
 plotly
 mplfinance
-shioaji ==1.1.10
+
 pynacl
